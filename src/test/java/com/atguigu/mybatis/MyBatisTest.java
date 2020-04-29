@@ -1,5 +1,6 @@
 package com.atguigu.mybatis;
 
+import com.atguigu.bean.Employee;
 import com.atguigu.dao.EmployeeMapper;
 import com.atguigu.dao.EmployeeMapperAnnotation;
 import org.apache.ibatis.io.Resources;
@@ -36,8 +37,18 @@ public class MyBatisTest {
     }
 
     @Test
-    public void employeeMapperAnnotation() throws IOException{
+    public void employeeMapperAnnotationTest() throws IOException {
         System.out.println(getSqlSessionFactory().openSession().getMapper(EmployeeMapperAnnotation.class).getEmpById(1));
+    }
+
+    @Test
+    public void addEmpTest() throws IOException {
+        SqlSession sqlSession = getSqlSessionFactory().openSession();
+        Employee mary = new Employee(2, "mary", "mary@gmai.com", "0");
+        sqlSession.getMapper(EmployeeMapper.class).addEmp(mary);
+        sqlSession.commit();
+        sqlSession.close();
+
     }
 
 }

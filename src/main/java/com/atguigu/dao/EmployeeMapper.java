@@ -1,6 +1,6 @@
 package com.atguigu.dao;
 
-import com.atguigu.mybatis.Employee;
+import com.atguigu.bean.Employee;
 
 public interface EmployeeMapper {
 

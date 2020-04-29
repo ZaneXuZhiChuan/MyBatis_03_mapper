@@ -1,6 +1,6 @@
 package com.atguigu.dao;
 
-import com.atguigu.mybatis.Employee;
+import com.atguigu.bean.Employee;
 import org.apache.ibatis.annotations.Select;
 
 public interface EmployeeMapperAnnotation {

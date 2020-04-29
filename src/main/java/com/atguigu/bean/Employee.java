@@ -1,10 +1,20 @@
-package com.atguigu.mybatis;
+package com.atguigu.bean;
 
 public class Employee {
     private Integer id;
     private String lastName;
     private String email;
     private String gender;
+
+    public Employee() {
+    }
+
+    public Employee(Integer id, String lastName, String email, String gender) {
+        this.id = id;
+        this.lastName = lastName;
+        this.email = email;
+        this.gender = gender;
+    }
 
     @Override
     public String toString() {
