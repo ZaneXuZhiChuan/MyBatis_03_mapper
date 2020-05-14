@@ -1,3 +1,5 @@
+workspace.xml
+target/*
 # Compiled class file
 *.class
 
